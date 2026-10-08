@@ -1,0 +1,94 @@
+settings:
+  initial-banner: storm
+  rotation-duration-ms: 1209600000 # 14 days
+  pull-cost: 500.0
+  currency-symbol: '$'
+  pity:
+    enabled: true
+    every-pulls: 50
+  gui:
+    title: '&8Gacha &7- &b%banner%'
+    size: 27
+    banner-slot: 4
+    rewards-start-slot: 9
+    info-slot: 22
+    pull-slot: 13
+banners:
+  storm:
+    display-name: '&bStorm Relics'
+    description:
+      - '&7A limited banner of storm-themed gear.'
+      - '&eRotates every 14 days.'
+    icon: TRIDENT
+    rewards:
+      thunder_sword:
+        display-name: '&bThunder God'
+        icon: DIAMOND_SWORD
+        weight: 2.0
+        pity: true
+        commands:
+          - 'mi give %player% SWORD THUNDER_GOD 1'
+      storm_armor:
+        display-name: '&9Storm Armor'
+        icon: DIAMOND_CHESTPLATE
+        weight: 8.0
+        pity: true
+        commands:
+          - 'ia give %player% weeklygacha:storm_armor 1'
+      gold:
+        display-name: '&6Gold Bundle'
+        icon: GOLD_INGOT
+        weight: 30.0
+        pity: false
+        commands:
+          - 'give %player% gold_ingot 16'
+      common:
+        display-name: '&fIron Bundle'
+        icon: IRON_INGOT
+        weight: 60.0
+        pity: false
+        commands:
+          - 'give %player% iron_ingot 24'
+  evergreen:
+    display-name: '&aEvergreen Cache'
+    description:
+      - '&7A standard banner with useful supplies.'
+      - '&eRotates every 14 days.'
+    icon: EMERALD
+    rewards:
+      emerald_bundle:
+        display-name: '&aEmerald Bundle'
+        icon: EMERALD
+        weight: 10.0
+        pity: true
+        commands:
+          - 'give %player% emerald 16'
+      golden_apples:
+        display-name: '&6Golden Apples'
+        icon: GOLDEN_APPLE
+        weight: 20.0
+        pity: false
+        commands:
+          - 'give %player% golden_apple 2'
+      iron:
+        display-name: '&fIron Bundle'
+        icon: IRON_INGOT
+        weight: 70.0
+        pity: false
+        commands:
+          - 'give %player% iron_ingot 16'
+messages:
+  prefix: '&8[&bWeeklyGacha&8] '
+  no-permission: "&cYou do not have permission."
+  economy-missing: '&cVault economy was not found. Contact an administrator.'
+  not-enough-money: '&cYou need %cost% to pull.'
+  pull-success: '&aYou received: %reward%&a!'
+  pull-failed: '&cThe pull failed. Please contact an administrator.'
+  banner-changed: '&aActive banner set to &f%banner%&a. Rotation timer restarted.'
+  banner-not-found: '&cUnknown banner ID. Use /gacha admin list.'
+  reloaded: '&aConfiguration reloaded.'
+  pity-notice: '&6Pity activated! You received a guaranteed featured reward.'
+  no-rewards: '&cThis banner has no valid rewards.'
+  history-header: '&bYour gacha history:'
+  history-line: '&7%date% &8- &f%banner% &8- %reward%'
+  no-history: '&7You do not have any gacha history yet.'

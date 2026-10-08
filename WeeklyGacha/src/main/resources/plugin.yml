@@ -1,0 +1,16 @@
+name: WeeklyGacha
+version: 1.0.0
+main: me.ely.gacha.WeeklyGacha
+api-version: '1.21'
+author: Ely
+softdepend: [Vault, MMOItems, ItemsAdder]
+commands:
+  gacha:
+    description: Open gacha or manage banners
+    usage: /gacha [history|admin set <bannerId>|admin reload|admin list]
+    aliases: [wgacha]
+permissions:
+  weeklygacha.use:
+    default: true
+  weeklygacha.admin:
+    default: op
